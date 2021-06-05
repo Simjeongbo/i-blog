@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Hi+Melody&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+
+
+body {
+  height: 100vh;
+  min-height: 30cm;
+
+}
+
+.clock {
+  display: none;
+}
+
+main{
+  padding:50px;
+  margin:auto;
+  text-align:center;
+}
+
+.deck {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  margin-top: 600px;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+
+.deck > ul {
+  font-size:0;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  
+}
+
+.deck > ul::-webkit-scrollbar {
+  margin-top: 30px;
+  width: 30px;
+}
+
+.deck > ul::-webkit-scrollbar-thumb {
+  background-color: #dddddc;
+}
+.deck > ul::-webkit-scrollbar-track {
+  background-color: rgb(209, 97, 22)
+}
+
+.deck > ul > li {
+  display:inline-block;
+  margin-right: 30px; 
+  margin-left: 30px;
+  animation: animate1 2s; 
+}
+@keyframes animate1 {
+  0%{
+    transform: translateX(600%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+
+.deck > ul > li .card {
+  position:relative;
+  overflow:hidden;
+}
+
+.card {
+  display: flex;
+  border-radius: 9px;
+  width:  700px;
+  height: 800px;
+  margin-top: 110px;  
+  margin-bottom: 110px;  
+  background-color: rgba(255, 255, 255, 0.192);
+  box-shadow: 0 5px 6px rgba(0,0,0,0.3), 0 5px 6px rgba(0,0,0,0.5);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  z-index: 3;
+}
+
+
+
+#num {
+  position: absolute;
+  width : 100%;
+  height: 10%;
+  background-color: rgb(253, 253, 253);
+  box-shadow: 0 5px 6px rgba(0,0,0,0.5), 0 5px 6px rgba(0,0,0,0.9);
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gugi', cursive;
+  color: #16075a;
+  z-index: 5;
+}
+
+#num h1 {
+  margin: auto 0;
+  align-items: center;
+  padding: 15px;
+}
+
+#img {
+  position: absolute;
+  width : 100%;
+  top: 10%;
+  height: 50%;
+}
+
+#info {
+  position: absolute;
+  width : 100%;
+  top: 60%;
+  height: 40%;
+  background-color: rgb(61, 51, 104);
+  box-shadow: 0 5px 6px rgba(0,0,0,0.3), 0 5px 6px rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  font-size: 30px;
+  font-family: 'Hi Melody', cursive;
+  color: aliceblue;
+  text-align: left;
+
+}
+
+
+
+.card #info #right {
+  position: absolute;
+  bottom: 37px;
+  right: 80px;
+  font-size: 20px;
+  color: white;
+  animation :right-motion1 1.5s infinite;
+}
+
+@keyframes right-motion1 {
+  0%{
+    right: 70px;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    right: 60px;
+    opacity: 0;
+  }
+}
+
+.card #info a {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+}
+
+.card #info p{
+  text-align: left;
+  font-size: 28px;
+}
+.card #info p span{
+  font-size: 23px;
+  color: rgb(255, 153, 0);
+  font-family: 'Do Hyeon', sans-serif;
+}
+.card #info p #spaceA{
+  color: rgb(255, 255, 255);
+}
+.card #info p #space{
+  display: none;
+}
+.card #info p #p-type2{
+  display: none;
+}
+.card #info .coming {
+  text-align: center;
+}
+
+#card1 #img {
+  background-size: cover;
+  background-position: center;
+  background-image: url(/img/num1.PNG);
+}
+
+#card2 #img {
+  background-size: cover;
+  background-position: center;
+  background-image: url(/img/막걸리1.jpg);
+  
+}
+
+
+#soon {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  height: 100px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 5px 6px rgba(0,0,0,0.3), 0 5px 6px rgba(0, 0, 0, 0.822);
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+#soon i {
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  font-size: 27px;
+
+}
+
+
+@media screen and (max-width: 1970px){
+  body {
+    min-height: 27cm;
+  }
+  .deck {
+    margin-top: 490px;
+  }
+
+  .card {
+    width:  600px;
+    height: 740px;
+    margin-bottom: 60px;
+  }
+
+  #num h1 {
+    margin: auto 0;
+    align-items: center;
+    padding: 12px;
+  }
+
+  #info {
+    padding: 21px 33px;
+  }
+
+  .card #info p{
+    text-align: left;
+    font-size: 28px;
+  }
+  .card #info p span{
+    font-size: 21.5px;
+  }
+  
+  .card #info #right {
+    bottom: 31px;
+    right: 60px;
+    font-size: 18px;
+    animation: right-motion2 1.5s infinite;
+  }
+
+  @keyframes right-motion2 {
+    0%{
+      right: 67px;
+    }
+    80%{
+      opacity: 1;
+    }
+    100%{
+      right: 58px;
+      opacity: 0;
+    }
+  }
+
+  .card #info a {
+    bottom: 22px;
+    right: 29px;
+    font-size: 29px;
+  }
+}
+
+
+@media screen and (max-width: 1680px){
+  body {
+    min-height: 22cm;
+  }
+  .deck {
+    margin-top: 400px;
+
+  }
+  
+  .card {
+    width:  410px;
+    height: 530px;
+    margin-bottom: 30px;
+  }
+
+  #num h1 {
+    padding: 11px;
+    font-size: 25px;
+  }
+
+  #info {
+    padding: 14px 22px;
+  }
+
+  .card #info p{
+    text-align: left;
+    font-size: 20px;
+  }
+  .card #info p span{
+    font-size: 18.3px;
+  }
+  .card #info p #space{
+    display: block;
+  }
+  .card #info p #p-type1{
+    display: none;
+  }
+  .card #info p #p-type2{
+    display: block;
+  }
+  .card #info #right {
+    bottom: 22px;
+    right: 56px;
+    font-size: 13px;
+    animation: right-motion3 1.5s infinite;
+  }
+
+  @keyframes right-motion3 {
+    0%{
+      right: 53px;
+    }
+    80%{
+      opacity: 1;
+    }
+    100%{
+      right: 42px;
+      opacity: 0;
+    }
+  }
+
+  .card #info a {
+    bottom: 15px;
+    right: 20px;
+    font-size: 22px;
+  }
+}
+
+
+
+@media screen and (max-width: 450px){
+  body {
+    min-height: 750px;
+  }
+
+  .deck {
+    margin-top: 360px;
+
+  }
+  .deck ul li{
+    margin-right: 35px;
+  }
+  #num h1 {
+    padding: 14px;
+  }
+  .card {
+    width:  90vw;
+    height: 590px;
+    margin-bottom: 40px;
+  }
+
+  .card #info p #spaceA{
+    font-size: 3.7vw;
+  }
+
+  .card #info p span{
+    font-size: 4vw;
+  }
+
+  #card1 {
+    margin-left: 0;
+  }
+
+  .deck li {
+   margin-left: 5%;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1100px){
+  .clock {
+    display:block;
+    position: fixed;
+    z-index: 15;
+    font-size: 2em;
+    top: 15.9px;
+    right: 80px;
+    width: 100%;
+    text-align: right;
+    font-family: 'Black Han Sans', sans-serif;    
+    color: aliceblue;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .clock{
+    display: none;
+  }
+}
