@@ -15,12 +15,6 @@ body {
   display: none;
 }
 
-main{
-  padding:50px;
-  margin:auto;
-  text-align:center;
-}
-
 .deck {
   overflow: hidden;
   display: flex;
@@ -169,9 +163,7 @@ main{
   color: rgb(255, 153, 0);
   font-family: 'Do Hyeon', sans-serif;
 }
-.card #info p #spaceA{
-  color: rgb(255, 255, 255);
-}
+
 .card #info p #space{
   display: none;
 }
@@ -191,10 +183,16 @@ main{
 #card2 #img {
   background-size: cover;
   background-position: center;
-  background-image: url(/img/막걸리1.jpg);
-  
+  background-image: url(/img/막걸리1.jpg);  
 }
 
+
+.card #info p #spaceA{
+  color: rgb(255, 255, 255);
+}
+.card #info p #spaceB{
+  color: rgb(255, 255, 255);
+}
 
 #soon {
   position: absolute;

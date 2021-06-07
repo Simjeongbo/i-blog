@@ -53,6 +53,11 @@ body {
   color: rgb(34, 17, 97);
 }
 
+.folder {
+  animation: tproject1 0.5s;
+}
+
+
 .folder ul li {
   display:inline-block;
   width: 300px;
